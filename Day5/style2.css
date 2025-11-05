@@ -1,6 +1,25 @@
 h1{
-    text-align: center
+    text-align: center;
+    background-color: whitesmoke;
+    padding:40px;
+    
 }
 
+ section {
+            padding: 50px;
+            color: white;
+        }
 
-section b
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        .green {
+            background-color: green;
+        }
+
