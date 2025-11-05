@@ -1,17 +1,19 @@
 h1{
     text-align: center;
-    background-color: whitesmoke;
-    padding:40px;
+    background-color: azure;
+    
+    
     
 }
 
  section {
-            padding: 50px;
+            padding: 40px;
             color: white;
         }
 
         .blue {
             background-color: blue;
+            color: aqua;
         }
 
         .yellow {
@@ -21,5 +23,7 @@ h1{
 
         .green {
             background-color: green;
+            color: whitesmoke;
+            
         }
 
