@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color:lightseagreen;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+h1{
+    color:black;
+    font-style:normal;
+    background-color: white;
+}
+p{
+    color:darkblue;
+}
