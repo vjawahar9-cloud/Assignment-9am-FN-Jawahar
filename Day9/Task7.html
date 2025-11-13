@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product Grid</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background-color: antiquewhite;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        .product img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: orange;
+        }
+
+        button:hover {
+
+            background-color: orangered;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>PRODUCT GRID</h2>
+
+    <div class="product-grid">
+        <div class="product"><img src="./a.jpg" alt="Shirt"><br>
+            <button type="button">Add to cart🛒</button>
+            <button type="button">Buy</button>
+        </div>
+
+
+        <div class="product"><img src="./b.jpg" alt="shirt"><br>
+            <button type="button">Add to cart🛒</button>
+            <button type="button">Buy</button>
+        </div>
+
+
+        <div class="product"><img src="./c.jpg" alt="shirt"><br>
+            <button type="button">Add to cart🛒</button>
+            <button type="button">Buy</button>
+        </div>
+
+
+        <div class="product"><img src="./d.jpg" alt="shirt"><br>
+            <button type="button">Add to cart🛒</button>
+            <button type="button">Buy</button>
+        </div>
+
+
+        <div class="product"><img src="./e.jpg" alt="shirt"><br>
+            <button type="button">Add to cart🛒</button>
+            <button type="button">Buy</button>
+        </div>
+
+
+        <div class="product"><img src="./f.jpg" alt="shirt"><br>
+            <button type="button">Add to cart🛒</button>
+            <button type="button">Buy</button>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid layout</title>
     <style>
+
+
+         body{
+            background-color: cornflowerblue;
+
+
+
+
+         }
+
         .grid-container{
             display: grid;
-            grid-template-columns: repeat(2, 0.001fr);
-            grid-gap: 5px;
-            margin-left: 20%;
-            
+            grid-template-columns: repeat(2, 0fr);
+            grid-gap: 10px;
+            margin-left: 30%;
          }
 
          .grid{
-            background-color: aliceblue;
-            padding: 15px;
-            text-align: center;
-            border-radius: 1px;
-            width: 400px;
-            
+            background-color: white;
+             text-align: center;
+            border-radius: 1px;  
          }
 
          .grid1{
@@ -32,7 +38,7 @@
          h2{
             text-decoration: underline;
             text-align: center;
-         }
+         
 
 
 
@@ -45,10 +51,10 @@
     <hr>
 
     <div class="grid-container">
-        <div class="grid"><img src="./images (1).jpg" alt="car image"></div>
-        <div class="grid"><img src="./images (3).jpg" alt="empty road"></div>
-        <div class="grid"><img src="./images (2).jpg" alt="car image"></div>
-        <div class="grid"><img src="./images (4).jpg" alt="empty road"></div>
+        <div class="grid"><button type="button"><img src="./images (1).jpg" alt="car image"></button></div>
+        <div class="grid"><button type="button"><img src="./images (3).jpg" alt="empty road"></button></div>
+        <div class="grid"><button type="button"><img src="./images (2).jpg" alt="car image"></button></div>
+        <div class="grid"><button type="button"><img src="./images (4).jpg" alt="empty road"></button></div>
 
     </div>
     
