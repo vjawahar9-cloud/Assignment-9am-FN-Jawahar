@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float images and clearfix</title>
+    <style>
+        body {
+            background-color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            color: antiquewhite;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+
+        }
+
+        .container::after {
+            content: "";
+            display: block;
+            clear: both
+        }
+
+        .left-image {
+            float: left;
+            margin-right: 10px;
+
+        }
+
+        .right-image {
+            float: right;
+            margin-left: 10px;
+
+        }
+
+        .container {
+            border: 2px solid white;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Float images and clearfix</h2>
+
+    <div class="container">
+
+        <div class="left-image"><img src="./a.jpg" alt="img"></div>
+        <div class="right-image"><img src="./b.jpg" alt="img"></div>
+
+        <p>The word nature is borrowed from the Old French nature and is derived from the Latin word natura, or
+            "essential qualities, innate disposition", and in ancient times, literally meant "birth". In ancient
+            philosophy, natura is mostly used as the Latin translation of the Greek word physis, which
+            originally related to the intrinsic characteristics of plants, animals, and other features of the world to
+            develop of their own accord. The concept of nature as a whole, the physical universe, is one of
+            several expansions of the original notion; it began with certain core applications of the word φύσις by
+            pre-Socratic philosophers (though this word had a dynamic dimension then, especially for Heraclitus), and
+            has steadily gained currency ever since.</p>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

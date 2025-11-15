@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 105vh;
+        }
+
+        header,
+        footer {
+            background-color: firebrick;
+            border: 1px solid white;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: firebrick;
+            padding: 10px;
+            border: 1px solid white;
+            text-align: left;
+
+        }
+
+        .sidebar ul {
+            list-style: none;
+            color: white;
+
+        }
+
+        .content {
+            flex: 1;
+            background-color: firebrick;
+            color: white;
+            text-align: center;
+            border: 1px solid white;
+
+        }
+
+        .content img {
+            margin-top: 50px;
+            border: 1px solid white;
+            border-radius: 10px;
+        
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>WWE RAW</h1>
+        </header>
+
+        <main>
+            <div class="sidebar">
+                <ul>
+                    <li><img src="./f.jpg" alt="wwe"> <br>BROCK VS BERG</li>
+
+                    <li><img src="./g.jpg" alt="wwe"><br>CENA VS REIGNS</li>
+
+                    <li><img src="./j.jpg" alt="wwe"><br>HALL OF FAME</li>
+
+
+                </ul>
+            </div>
+
+
+            <div class="content">
+                <img src="./i.jpg" alt="wwe">
+                <p>WWE Raw is an American professional wrestling television program produced by WWE, featuring wrestlers
+                    from the Raw brand, which airs live on Monday nights. Debuting in 1993, it is one of WWE's two
+                    flagship programs and is considered to be the most-watched, regularly scheduled, live year-round
+                    program on cable. Currently, the show is available on Netflix in addition to USA Network and other
+                    streaming platforms.
+                    Key facts
+                    Debut: January 11, 1993.
+                    Broadcast schedule: Live every Monday at 8 p.m. Eastern Time.
+                    Platform: Available on Netflix and USA Network, among other platforms.
+                    Content: Features live action, drama, and athleticism from the Raw brand's roster.
+                    Flagship status: Considered one of WWE's two main flagship programs, along with Friday Night
+                    SmackDown.
+                    Production: Produced by WWE, with a multi-camera setup and a flexible running time of approximately
+                    150 minutes, including commercials.
+                    History: Originally a 60-minute show that was shot and aired to a live audience, breaking from the
+                    traditional pre-taped format of the time.
+                    Production and history
+                    The program was created by Vince McMahon.
+                    Its broadcast was expanded from 60 minutes to 180 minutes over time.
+                    The show's brand extension was discontinued from 2011 to 2016 before being reinstated.
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <h2> &copy:2025 WWE RAW| All rights reserved</h2>
+
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>
