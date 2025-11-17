@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .complex-section{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .left-box{
+            display: flex;
+            flex-direction: column;
+            background-image: url(./k.jpg);
+            object-fit: cover;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            justify-content: center;
+        }
+        .right-box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .right-box .item{
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            width: calc(50% -20px);
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <section class="complex-section">
+
+        <div class="left-box">
+            <h2>Travel</h2>
+            <p>Pack your bags and explore the best locations and experiences from around the world. From UNESCO World
+                Heritage Sites to hidden gems and experiences the whole family can enjoy, learn everything you need to
+                know before you embark on your next adventure. </p>
+        </div>
+
+        <div class="right-box">
+            <div class="item">Animals</div>
+            <div class="item">History & Culture</div>
+            <div class="item">Travel</div>
+            <div class="item">Science & Nature</div>
+        </div>
+    </section>
+
+</body>
+
+</html>
