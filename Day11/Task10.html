@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Homepage</title>
+
+    <style>
+        .blog{
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 1fr 300px;
+            grid-template-areas:
+            "header header"
+            "posts sidebar"
+            "footer footer" ;
+        }
+
+        .header{
+            grid-area: header;
+            background-color: lightslategrey;
+            padding: 30px;
+        }
+        .posts{
+            grid-area: posts;
+            background-color: lightcoral;
+            padding: 30px;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: lightsalmon;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: lightgoldenrodyellow;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="blog">
+        <div class="header">BLOG HEADER</div>
+        <div class="posts">POST LIST AREA</div>
+        <div class="sidebar">SIDEBAR</div>
+        <div class="footer">FOOTER</div>
+    </div>
+    
+</body>
+</html>

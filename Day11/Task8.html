@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layoutt</title>
+
+    <style>
+        .dashboard{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: 80px 1fr;
+            grid-template-areas: 
+            "sidebar header header"
+            "sidebar main stats" ;
+            gap: 12px;
+       }
+
+       .header{
+        grid-area: header;
+        background-color: lightskyblue;
+       }
+
+       .sidebar{
+        grid-area: sidebar;
+        background-color: lightcoral;
+       }
+
+       .main{
+        grid-area: main;
+        background-color: lightsalmon;
+       }
+       .stats{
+        grid-area: stats;
+        background-color: lightslategrey;
+
+       }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">SIDEBAR</div>
+        <div class="header">HEADER</div>
+        <div class="main">MAIN SECTION</div>
+        <div class="stats">STATS</div>
+    </div>
+    
+</body>
+</html>

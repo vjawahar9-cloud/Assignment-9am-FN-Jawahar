@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 100% 1fr;
+            grid-template-areas: 
+            "header nav"
+            "hero hero"
+            "gallery gallery"
+            "testimonials testimonials"
+            "footer footer";
+            gap: 20px;
+            padding: 20px;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+        
+            display: flex;
+            justify-content: space-between;
+            background-color: blueviolet;
+            color: white;
+            padding: 25px;
+            text-align: c
+            letter-spacing: 1px;
+            border-radius: 10px;
+        }
+        header nav a{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero{
+            grid-area: hero;
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 12px;
+        }
+        .hero h1{
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p{
+            font-size: 18px;
+        }
+
+        .gallery{
+            grid-area: gallery;
+        }
+        .gallery h2{
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .grid-gallery{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+        }
+
+        .grid-gallery .item{
+            background-color: aliceblue;
+            padding: 60px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .testimonials{
+            grid-area: testimonials;
+        }
+
+        .testimonials h2{
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        .grid-testimonials{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .grid-testimonials .box{
+            background-color: aliceblue;
+            padding: 25px;
+            border-left: 6px solid blueviolet;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+        footer{
+            grid-area: footer;
+            background-color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>My Portfolio - Grid Version</h2>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Hii <br>
+                I'am JOE <br>
+                Web Developer
+            </h1>
+            <p>Hi, I’m Joe — a passionate web developer who loves turning ideas into clean, responsive,<br> and
+                user-friendly websites. I enjoy building modern layouts using HTML, CSS, Grid, and <br> Flexbox, and I’m
+                constantly exploring new technologies to improve my craft.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>My Gallery</h2>
+            <div class="grid-gallery">
+                <div class="item"><img src="./sam1.jpg" alt="sample"></div>
+                <div class="item"><img src="./sam2.jpg" alt="sample"></div>
+                <div class="item"><img src="./sam3.jpg" alt="sample"></div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="grid-testimonials">
+            <div class="box">Clean design and great attention to detail.” - Client-A</div>
+            <div class="box">“Very professional and easy to work with.” - Client-B</div>
+            <div class="box">“Reliable, skilled, and highly recommended.” - Client-C</div>
+            </div>
+        </section>
+
+        <footer>
+           <h2> &copy:2025 My Portfolio | All Rights Reserved </h2>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
