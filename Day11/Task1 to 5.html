@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice task</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,150px);
+            gap: 15px;
+            grid-template-areas: 
+            "header header header"
+            "main main footer";
+        }
+
+        .header{
+            grid-area: header;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .main{
+            grid-area: main;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: lightcoral;
+            padding: 20px;
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER AREA</div>
+        <div class="main">MAIN CONTENT AREA</div>
+        <div class="footer">FOOTER AREA</div>
+
+
+
+    </div>
+    
+</body>
+</html>

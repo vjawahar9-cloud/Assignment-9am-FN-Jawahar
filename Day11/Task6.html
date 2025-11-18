@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Website Layout</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+            height: 100vh;
+            gap: 10px;
+        }
+        header{
+            grid-area: header;
+            background-color: lightskyblue;
+        }
+        aside{
+            grid-area: sidebar;
+            background-color: lightcoral;
+        }
+        main{
+            grid-area: content;
+            background-color: lightsalmon;
+
+        }
+        footer{
+            grid-area: footer;
+            background-color: limegreen;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>HEADER</header>
+        <aside>SIDEBAR</aside>
+        <main>CONTENT</main>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+</html>
