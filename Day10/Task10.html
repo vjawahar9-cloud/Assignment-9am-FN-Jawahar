@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header nav"
+                "main main"
+                "footer footer";
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+
+        }
+
+        main {
+            margin-left: 80px;
+            grid-area: main;
+            background-color: white;
+            padding: 100px;
+        }
+
+        .left-image {
+            float: left;
+            margin-right: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: blueviolet;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cointainer">
+        <header>
+            <h2>JOE</h2>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="left-image"><img src="./l.jpg" alt="man"></div>
+            <h1>Hii <br>
+                I'am JOE <br>
+                Web Developer
+            </h1>
+            <p>Hi, I’m Joe — a passionate web developer who loves turning ideas into clean, responsive,<br> and
+                user-friendly websites. I enjoy building modern layouts using HTML, CSS, Grid, and <br> Flexbox, and I’m
+                constantly exploring new technologies to improve my craft.</p>
+
+            <button type="button">Hire me</button>
+            <button type="button">See Projects</button>
+        </main>
+
+        <footer>&copy;2025 My Portfolio | All Rights Reserved</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
