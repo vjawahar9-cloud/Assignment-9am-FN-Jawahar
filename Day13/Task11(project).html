@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Integration</title>
+
+    <style>
+        
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #ccc;
+            border-top: 6px solid blueviolet;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        body.loaded #loader {
+            display: none;
+        }
+
+        body.loaded .container {
+            animation: fadeSlide 1s ease forwards;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header nav"
+                "main main"
+                "footer footer";
+            grid-template-columns: 1500px 1fr;
+            gap: 20px;
+            padding: 20px;
+            opacity: 0;
+        }
+
+        header {
+            grid-area: header;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        header nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: white;
+            left: 0;
+            bottom: -4px;
+            transition: 0.3s;
+        }
+
+        header nav a:hover {
+            color: yellow;
+        }
+
+        header nav a:hover::after {
+            width: 100%
+        }
+
+        main {
+            margin-left: 80px;
+            grid-area: main;
+            background-color: white;
+            padding: 100px;
+        }
+
+        
+        .left-image img {
+            width: 180px;
+            transition: 0.4s ease;
+            border-radius: 10px;
+        }
+
+        .left-image img:hover {
+            transform: scale(1.1);
+        }
+
+        .left-image {
+            float: left;
+            margin-right: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 7px 15px;
+            border-radius: 10px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: red;
+            transform: scale(1.05);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: blueviolet;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h2>JOE</h2>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="left-image"><img src="./l.jpg" alt="man"></div>
+            <h1>Hii <br>
+                I'am JOE <br>
+                Web Developer
+            </h1>
+
+            <p>Hi, I’m Joe — a passionate web developer who loves turning ideas into clean, responsive,<br>
+                and user-friendly websites. I enjoy building modern layouts using HTML, CSS, Grid, and <br>
+                Flexbox, and I’m constantly exploring new technologies to improve my craft.
+            </p>
+
+            <button type="button">Hire me</button>
+            <button type="button">See Projects</button>
+        </main>
+
+        <footer>&copy;2025 My Portfolio | All Rights Reserved</footer>
+    </div>
+
+</body>
+
+</html>
