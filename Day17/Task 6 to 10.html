@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Tasks</title>
+
+    <script>
+        // -----------------------------
+        // TASK 1: Display Dynamic Text
+        // -----------------------------
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("dynamicText").innerText = "This text is added using JavaScript!";
+        });
+
+        // ---------------------------------------
+        // TASK 2: Welcome Alert on Page Load
+        // ---------------------------------------
+        window.onload = function () {
+            alert("Welcome to my JavaScript Page!");
+        };
+
+        // --------------------------------------------------
+        // TASK 3: Log hobby, food, and color to the console
+        // --------------------------------------------------
+        console.log("My Favorite Hobby: Coding");
+        console.log("My Favorite Food: Pizza");
+        console.log("My Favorite Color: Blue");
+
+        // -------------------------------------------------
+        // TASK 4: Button that changes <p> text on click
+        // -------------------------------------------------
+        function changeText() {
+            document.getElementById("clickText").innerText = "You clicked the button — text changed!";
+        }
+
+        // -------------------------------------------------
+        // TASK 5: Small 'About Me' script in console
+        // -------------------------------------------------
+        console.log("About Me:");
+        console.log("Name: Jawahar");
+        console.log("Age: 20");
+        console.log("City: Chennai");
+        console.log("Goal: Become a Web Developer");
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Tasks Demo</h1>
+
+    <!-- Dynamic text area -->
+    <p id="dynamicText" style="font-size: 18px; font-weight: bold;"></p>
+
+    <br>
+
+    <!-- Button that changes text -->
+    <p id="clickText">Click the button to change this text.</p>
+    <button onclick="changeText()">Click Me</button>
+
+</body>
+</html>

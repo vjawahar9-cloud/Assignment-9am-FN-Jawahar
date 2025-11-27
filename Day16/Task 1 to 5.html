@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Tasks</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="p-4">
+    <button
+      class="btn btn-primary mb-4"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Open Modal
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal Title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Welcome to switzerland</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./a.jpg" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+          <img src="./b.webp" class="d-block w-100" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <h2 class="mb-3">
+      <i class="bi bi-lightning-charge-fill text-warning"></i>
+      Power Features
+    </h2>
+
+    <button
+      class="btn btn-secondary mb-3"
+      data-bs-toggle="collapse"
+      data-bs-target="#moreInfo"
+    >
+      More Info
+    </button>
+
+    <div id="moreInfo" class="collapse">
+      <div class="card card-body">
+        The 10 best places to visit in Switzerland | ExpaticaPopular tourist
+        spots in Switzerland include Zurich for its urban and cultural
+        attractions, Lucerne for its picturesque lakeside setting, Interlaken
+        for adventure sports, and Zermatt for the iconic Matterhorn mountain
+      </div>
+    </div>
+
+    <button
+      class="btn text-white px-4 py-2 mt-4"
+      style="background-color: #0d6efd"
+    >
+      Custom Styled Button
+    </button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
