@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let & Const Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .counter-box {
+            background: white;
+            padding: 20px;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript let & const Example</h1>
+
+    <div class="counter-box">
+        <p>Counter Value: <span id="countValue">0</span></p>
+        <button id="increaseBtn">+</button>
+        <button id="decreaseBtn">-</button>
+    </div>
+
+    <script>
+       
+        const THEME_COLOR = "#4A90E2";
+        const BASE_API_URL = "https://api.example.com/v1";
+        const TAX_RATE = 0.18;
+
+        console.log("Theme Color:", THEME_COLOR);
+        console.log("API URL:", BASE_API_URL);
+        console.log("Tax Rate:", TAX_RATE);
+
+        
+        document.body.style.backgroundColor = "#f4f4f4";
+
+        
+        let counter = 0;   
+
+        const countDisplay = document.getElementById("countValue");
+        const increaseBtn = document.getElementById("increaseBtn");
+        const decreaseBtn = document.getElementById("decreaseBtn");
+
+       
+        increaseBtn.addEventListener("click", () => {
+            counter++;
+            countDisplay.textContent = counter;
+        });
+
+        decreaseBtn.addEventListener("click", () => {
+            counter--;
+            countDisplay.textContent = counter;
+        });
+    </script>
+
+</body>
+</html>
