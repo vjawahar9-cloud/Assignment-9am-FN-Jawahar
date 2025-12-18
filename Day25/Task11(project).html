@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Product Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    ul {
+      background: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      list-style: none;
+    }
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🛍️ All Products</h2>
+  <ul id="productList"></ul>
+
+  <h2>💸 Affordable Products (Price < 500)</h2>
+  <ul id="cheapProducts"></ul>
+
+  <h2>🧮 Total Price</h2>
+  <p id="totalPrice" class="total"></p>
+
+  <script>
+    // Product Array
+    let products = [
+      { name: "Mouse", price: 400 },
+      { name: "Keyboard", price: 800 },
+      { name: "USB Cable", price: 200 },
+      { name: "Headphones", price: 1200 },
+      { name: "Notebook", price: 100 }
+    ];
+
+    // Display All Products
+    let productList = document.getElementById("productList");
+
+    products.forEach(product => {
+      let li = document.createElement("li");
+      li.textContent = `${product.name} - ₹${product.price}`;
+      productList.appendChild(li);
+    });
+
+    // Filter Products (price < 500)
+    let cheapProducts = products.filter(product => product.price < 500);
+    let cheapList = document.getElementById("cheapProducts");
+
+    cheapProducts.forEach(product => {
+      let li = document.createElement("li");
+      li.textContent = `${product.name} - ₹${product.price}`;
+      cheapList.appendChild(li);
+    });
+
+    // Calculate Total Price using reduce()
+    let total = products.reduce((sum, product) => sum + product.price, 0);
+
+    document.getElementById("totalPrice").textContent =
+      "Total Price: ₹" + total;
+  </script>
+
+</body>
+</html>
