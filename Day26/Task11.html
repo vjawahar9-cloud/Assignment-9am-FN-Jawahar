@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Based Project</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+        transition: 0.3s;
+      }
+      li {
+        margin: 8px 0;
+      }
+      button {
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+      .project {
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Dynamic Title -->
+    <h2 id="title">🛒 Product List</h2>
+    <button id="changeTitleBtn">Change Title</button>
+
+    <hr />
+
+    <!-- Background Color -->
+    <button id="bgBtn">Change Background</button>
+
+    <hr />
+
+    <!-- Product Buttons -->
+    <button onclick="showAll()">Show All</button>
+    <button onclick="showAffordable()">Price < 500</button>
+
+    <ul id="productList"></ul>
+
+    <h3>Total Price: ₹<span id="total">0</span></h3>
+
+    <hr />
+
+    <!-- Dynamic Project Section -->
+    <h3>📁 Projects</h3>
+    <button id="addProjectBtn">Add New Project</button>
+    <div id="projects"></div>
+
+    <script>
+      /* 1️⃣ Data stored in array */
+      const products = [
+        { name: "Keyboard", price: 700 },
+        { name: "Mouse", price: 300 },
+        { name: "USB Cable", price: 150 },
+        { name: "Headphones", price: 1200 },
+        { name: "Pen Drive", price: 450 },
+      ];
+
+      /* 2️⃣ Display using forEach() */
+      function displayProducts(items) {
+        const list = document.getElementById("productList");
+        list.innerHTML = "";
+
+        items.forEach((product) => {
+          const li = document.createElement("li");
+          li.textContent = `${product.name} - ₹${product.price}`;
+          list.appendChild(li);
+        });
+
+        calculateTotal(items);
+      }
+
+      /* 3️⃣ Filter products */
+      function showAffordable() {
+        const filtered = products.filter((p) => p.price < 500);
+        displayProducts(filtered);
+      }
+
+      /* 4️⃣ Reduce to calculate total */
+      function calculateTotal(items) {
+        const total = items.reduce((sum, item) => sum + item.price, 0);
+        document.getElementById("total").innerText = total;
+      }
+
+      /* Show all on load */
+      function showAll() {
+        displayProducts(products);
+      }
+      showAll();
+
+      /* 🔹 Modify title dynamically */
+      document
+        .getElementById("changeTitleBtn")
+        .addEventListener("click", () => {
+          document.getElementById("title").innerText =
+            "🛍️ Updated Product Store";
+        });
+
+      /* 🔹 Change background color */
+      document.getElementById("bgBtn").addEventListener("click", () => {
+        document.body.style.background =
+          document.body.style.background === "lightyellow"
+            ? "white"
+            : "lightyellow";
+      });
+
+      /* 🔹 Add project dynamically using appendChild */
+      document.getElementById("addProjectBtn").addEventListener("click", () => {
+        const div = document.createElement("div");
+        div.className = "project";
+        div.innerText = "New Project Added";
+
+        /* Hover effect */
+        div.addEventListener("mouseenter", () => {
+          div.style.background = "#e0f7fa";
+        });
+
+        div.addEventListener("mouseleave", () => {
+          div.style.background = "white";
+        });
+
+        document.getElementById("projects").appendChild(div);
+      });
+    </script>
+  </body>
+</html>
